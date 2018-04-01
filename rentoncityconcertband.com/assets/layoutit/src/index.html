@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Renton City Concert Band</title>
+
+        <meta name="description" content="Main site for the community-based concert band in Renton">
+        <meta name="author" content="Aaron Robinson">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- lux/slate/yeti/cosmo/litera/flatly -->
+        <link href="css/style.css" rel="stylesheet">
+        <!-- <link href="https://bootswatch.com/4/lux/bootstrap.min.css" rel="stylesheet"> -->
+
+
+        <link rel="stylesheet" href="css/jqwidgets/jqx.base.css" type="text/css" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1 minimum-scale=1" />
+        
+        <script src="js/jquery.min.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+        
+        <script type="text/javascript" src="js/jqwidgets/jqxcore.js"></script>
+        <script type="text/javascript" src="js/jqwidgets/jqxdatetimeinput.js"></script>
+        <script type="text/javascript" src="js/jqwidgets/jqxcalendar.js"></script>
+        <script type="text/javascript" src="js/jqwidgets/jqxtooltip.js"></script>
+        <script type="text/javascript" src="js/jqwidgets/globalization/globalize.js"></script>
+        <script type="text/javascript" src="js/demos.js"></script>
+    </head>
+    <body>
+
+    <div class="container">
+	<div class="row">
+		<div>
+            <div class="page-header-image"></div>
+			<div class="page-header">
+				<h1>
+                    <large>Renton City Concert Band</large> <small><p>Community driven, fun focused!</p></small>
+				</h1>
+			</div>
+			<nav class="navbar navbar-expand" role="navigation">
+				<div class="navbar-header"> 
+					<a class="navbar-brand"></a>
+				</div>
+				
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Join Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Our History</a></li>
+					</ul>
+					
+					<ul class="nav navbar-nav navbar-right">
+                        <li><a href='#'>RCCB</a></li>
+                    </ul>
+				</div>
+				
+			</nav>
+			<div class="jumbotron well">
+				<h2>
+					Concert Series
+				</h2>
+				<div>
+					<p class="MsoBodyText3">
+						<span>The Renton City Concert Band presents a series of three concerts each school year in December, March and June.</span>
+					</p>
+					<p class="MsoBodyText3">
+					</p>
+					<p class="MsoBodyText3">
+						<span>All Concerts are held at the IKEA Performing Arts Center at Renton High School. 400 S. 2nd Street Renton, WA 98057</span>
+					</p>
+				</div>
+				<h2>
+					2018 Spring-Summer Concert Line-up
+				</h2>
+				<p>
+					March 25 - Marches, Movies, and Musicals
+				</p>
+				<p>
+					June 10th - Freaky, Funky, Fun!
+				</p>
+				<p>
+					<a class="btn btn-primary btn-large" href="#">Full Schedule</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<h2>
+				Marches, Movies, and Musicals!
+			</h2>
+			<p>
+				Join us lock-step into the Spring on March 25th at 2PM, 2018.
+			</p>
+			<p>
+				<a class="btn" href="#">View details »</a>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h2>
+				Freaky, Funky, Fun!
+			</h2>
+			<p>
+				Ready for some mandatory fun?  Crave the power of Earth, Wind, and Fire?  Join us on June 10th as we celebrate summer at the IKEA PAC!
+			</p>
+		</div>
+        <div class="col-md-4">
+			<h2>
+				Holiday Heralds
+			</h2>
+			<p>
+				Bring in the Season with us later this year with a 
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h2>
+				Event Calendar
+			</h2>
+			<div id='jqxWidget'></div>
+		</div>
+	</div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Create calendar.
+            $("#jqxWidget").jqxCalendar({ 
+                enableTooltips: true, width: 300, height: 300,
+                culture: 'en-US'
+            });
+            var events = [
+                [ "2018-02-10 10:00:00 GMT-0800", "Morning rehearsal at RHS." ],
+                [ "2018-02-13 10:00:00 GMT-0800", "Morning 2nd rehearsal at RHS." ],
+                [ "2018-02-15 10:00:00 GMT-0800", "Morning 3rd rehearsal at RHS." ],
+                [ "2018-02-19 10:00:00 GMT-0800", "Morning last rehearsal at RHS." ]
+            ]
+            events.forEach(function (event){
+                var dte = new Date(event[0]);
+                $("#jqxWidget").jqxCalendar('addSpecialDate', dte, '', event[1]);
+            })
+        });
+    </script>
+
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

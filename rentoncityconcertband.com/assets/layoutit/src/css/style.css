@@ -1,0 +1,20 @@
+
+.page-header-image{
+    background: url("../img/rccb_122016_crop.jpg") 0% 20% no-repeat;
+    height: 300px;
+}
+
+.navbar-brand>img {
+  height: 100%;
+  padding: 0px;
+  width: 100%;
+}
+.navbar-brand{ 
+    background: url(../img/RCCB_logo.jpg) left / contain no-repeat;
+    width: 100px;
+    height: 100px;
+}
+.nav-item{
+    size: 100px;
+    font-size: 500;
+}
