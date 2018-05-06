@@ -44,18 +44,34 @@ body {
 	/*color: #1224A5;*/
 }
 .jumbotron {
+    position: relative;
 	padding: 50px;
 	background-color: #b4dfe4;
 	/*background-color: #69C6B3;*/
 	width: 100%;
 }
+.jumbotron .img {
+    /*style="opacity: 0.2; background: url(assets/Godzilla_Statue.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;"*/
+    opacity: 0.1;
+    color: #fff;
+    background: url("../assets/Godzilla_Statue.jpg") top center no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
+/*../assets/notes_page.jpg*/
 .col1 {
-	background: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
-                rgba(255,255,255,0.55) url("../assets/notes_page.jpg") no-repeat center;
+	background: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.75)),
+                rgba(255,255,255,0.55) url("../assets/Godzilla_Iguana.jpg") no-repeat center;
 }
 .col2 {
 	background: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
-                rgba(255,255,255,0.35) url("../assets/cymbal.jpeg") no-repeat center;
+                rgba(255,255,255,0.35) url("../assets/American-flag.jpg") no-repeat center;
 }
 .col3 {
 	background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
@@ -71,7 +87,6 @@ body {
 .fc-day-grid-event > .fc-content {
     white-space: normal;
 }
-
 
 /* POSTER MODAL */
 /* Style the Image Used to Trigger the Modal */

@@ -25,80 +25,59 @@
     	<div class="container">
 			<div id="header-html"></div>
 			<div class="row">
-				<div class="jumbotron well">
+				<div class="jumbotron">
+					<div class="img"></div>
 					<h2>
 						Concert Series
 					</h2>
 					<h4>
-					<div>
-						<p>
-							The Renton City Concert Band presents a series of three concerts each school year in December, March and June.
-						</p>
-						<p>
-						</p>
-						<p>
-							All Concerts are held at the IKEA Performing Arts Center at Renton High School. 400 S. 2nd Street Renton, WA 98057
-						</p>
-
-					<h4>Concert Poster! (click for full image)</h4>
-					</div>
-							<!-- Trigger the Modal -->
-							<img id="myImg" src="img/201803_Poster.png" alt="2018 March Concert Poster" width="289" height="446" align="left" style="margin:20px">
-							<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Frobinsonaarond%2Fposts%2F10215308310405081&width=500" width="500" height="446" style="border:none;overflow:hidden;margin:20px" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-
-							<!-- The Modal -->
-							<div id="myModal" class="modal">
-
-							  <!-- The Close Button -->
-							  <span class="close">&times;</span>
-
-							  <!-- Modal Content (The Image) -->
-							  <img class="modal-content" id="img01">
-
-							  <!-- Modal Caption (Image Text) -->
-							  <div id="caption"></div>
-							</div>
-					</h4>
+						<div>
+							<p>
+								The Renton City Concert Band presents a series of three concerts each school year in December, March and June.
+							</p>
 					<h2>
-						2018 Spring-Summer Concert Line-up
+						2018 Events
 					</h2>
 					<h4>
-					<p>
-						March 25 - Marches, Movies, and Musicals
-					</p>
-					<p>
-						June 10th - Freaky, Funky, Fun!
-					</p>
+						<div style="text-decoration: line-through">
+							<p>
+								- March 25 - Marches, Movies, and Musicals
+							</p>
+						</div>
+						<p>
+							- June 10th - Freaky, Funky, Fun!
+						</p>
+						<p>
+							- July 4th - Independence Day Celebration
+						</p>
+						</div>
 					</h4>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-4 col1">
 					<h2>
-						Marches, Movies, and Musicals!
-					</h2>
-					<p>
-						Join us lock-step into the Spring on March 25th at 2PM, 2018.
-						<br><br><b>On the docket:</b>
-						<br>- March of the Belgian Paratroopers
-						<br>- Les Miserables
-						<br>- Star Wars compilation
-						<br>- "My Shot", <i>Hamilton</i>
-						<br>- And more!
-					</p>
-				</div>
-				<div class="col-md-4 col2">
-					<h2>
 						Freaky, Funky, Fun!
 					</h2>
 					<p>
-						Hungry for some fun?  Crave the power of Funk?  Join us on June 10th as we celebrate some of the greats this summer at the IKEA PAC!						
+						Hungry for some fun?  Crave the power of Funk?  Join us on June 10th as we celebrate some of the greats this spring at the IKEA PAC!						
 						<br><br><b>On the docket:</b>
-						<br>- Symphony No. 1
-						<br>- Birdland
+						<br>- Symphony No. 1 (In Memoriam Dresden)
+						<br>- Grand Serenade for an Awful Lot of Winds and Percussion
 						<br>- Godzilla Eats Las Vegas
 						<br>- Tower of Power
 						<br>- And more!
+					</p>
+
+				</div>
+				<div class="col-md-4 col2">
+					<h2>
+						Summer Park Performances
+					</h2>
+					<p>
+						Performances throughout the summer, including July 4th!
+						<br><br><b>On the docket:</b>
+						<br><br>- TBA
 					</p>
 				</div>
    		 	    <div class="col-md-4 col3">
@@ -108,34 +87,39 @@
 					<p>
 						Bring in the Season with us later this year with the sound of the holidays as we celebrate this Christmas season with all the classics!
 						<br><br><b>On the docket:</b>
-						<br><br>- TBD
+						<br><br>- TBA
 					</p>
+				</div>
+				<div class="jumbotron">
+					<!-- <div class="img"></div> -->
+					<h4>
+						<p>
+							All Concerts are held at the <b>IKEA Performing Arts Center</b>, located at:
+							<div align="left"> 
+								<div id="map" style="width:506px;height:250px"></div>
+								<p><i>Renton High School, 400 S. 2nd Street Renton, WA 98057</i></p>
+							</div>
+						</p>
+					</h4>
 				</div>
 			</div>
 			<div id="footer-html"></div>
 		</div>
 	</div>
 	<script>
-		// Get the modal
-		var modal = document.getElementById('myModal');
-
-		// Get the image and insert it inside the modal - use its "alt" text as a caption
-		var img = document.getElementById('myImg');
-		var modalImg = document.getElementById("img01");
-		var captionText = document.getElementById("caption");
-		img.onclick = function(){
-		    modal.style.display = "block";
-		    modalImg.src = this.src;
-		    captionText.innerHTML = this.alt;
+		function myMap() {
+		    var mapOptions = {
+		        center: new google.maps.LatLng(47.481741, -122.21197),
+		        zoom: 13,
+		        mapTypeId: google.maps.MapTypeId.ROADMAP
+		    }
+		var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+		var marker = new google.maps.Marker({
+			map: map,position: new google.maps.LatLng(47.481741,-122.21197000000001)});
+			infowindow = new google.maps.InfoWindow({content:'<strong>IKEA Performing Arts</strong><br>400 S 2nd St, Renton, WA 98057<br> <br>'});
+			infowindow.open(map,marker);
 		}
-
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() { 
-		  modal.style.display = "none";
-		}
-		</script>
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
   </body>
 </html>
