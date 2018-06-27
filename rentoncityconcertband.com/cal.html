@@ -11,7 +11,6 @@
     <meta name="description" content="Main site for the community-based concert band in Renton">
     <meta name="author" content="Aaron Robinson">
 
-    <link href="css/style.css" rel="stylesheet">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1 minimum-scale=1" />
@@ -25,6 +24,7 @@
 		<script src='js/fullcalendar/fullcalendar.min.js'></script>
 		<script src='js/jquery.qtip.min.js'></script>
 		<script src='js/scripts.js'></script>
+    <link href="css/style.css" rel="stylesheet">
 		<style>
 			#calendar {
 				max-width: 900px;
@@ -44,21 +44,16 @@
 					header: {
 						left: 'prev,next today',
 						center: 'title',
-						right: 'month,agendaWeek,agendaDay,listWeek'
+						right: 'month,listMonth'
 					},
 					navLinks: true, // can click day/week names to navigate views
 					editable: false,
 					eventLimit: true, // allow "more" link when too many events
 					events: [
 						{
-							title: 'PERFORMANCE (Marches, Movies, and Musicals)',
+							title: 'PERFORMANCE \n(Marches, Movies, and Musicals)',
 							start: '2018-03-25 14:00',
-							color: 'green'
-						},
-						{
-							title: 'PERFORMANCE (Freaky, Funky, Fun!)',
-							start: '2018-05-10 14:00',
-							color: 'green'
+							color: 'white'
 						},
 						{
 							title: 'NO Rehearsal',
@@ -72,6 +67,37 @@
 							color: 'light blue'
 						},
 						{
+							title: "PERFORMANCE \nLindbergh High School",
+							start: "2018/05/31 19:00",
+							end: "2018/05/31 21:00",
+							color: 'white'
+						},
+						{
+							title: 'PERFORMANCE \n(Freaky, Funky, Fun!)',
+							start: '2018-06-10 14:00',
+							color: 'white'
+						},
+						{
+							title: 'Rehearsal for Summer (ONLY REHEARSAL!)',
+							start: '2018-06-21 19:30',
+							color: 'light blue'
+						},
+						{
+							title: 'Kidd Valley Concert at Coulon Park (Dress is khaki pants and teal polo)',
+							start: '2018-06-27 19:00',
+							color: 'white'
+						},
+						{
+							title: 'City of Renton 4th of July at Coulon Park (Dress is khaki pants and teal polo)',
+							start: '2018-07-04 16:00',
+							color: 'white'
+						},
+						{
+							title: 'SUMMER CONCERT\nRenton River Days at Liberty Park (Dress is khaki pants and teal polo)',
+							start: '2018-07-29 13:00',
+							color: 'white'
+						},
+						{
 							id: 999,
 							title: 'Rehearsal',
 							start: '19:30',
@@ -80,7 +106,8 @@
 							dow: [ 4 ],
 							ranges: [{start:"2018/01/01", end:"2018/02/21"},
 											 {start:"2018/02/23", end:"2018/04/11"},
-											 {start:"2018/04/13", end:"2018/06/08"}]
+											 {start:"2018/04/13", end:"2018/05/30"},
+											 {start:"2018/06/01", end:"2018/06/08"}]
 						}
 					],
 					eventRender: function(event, element){

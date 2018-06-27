@@ -12,6 +12,9 @@
 
         <link href="css/style.css" rel="stylesheet">
 
+        <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+
+
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1 minimum-scale=1" />
         
@@ -26,39 +29,103 @@
 			<div id="header-html"></div>
 			<div class="row">
 				<div class="jumbotron">
-					<div class="img"></div>
-					<h2>
-						Concert Series
-					</h2>
+					<!-- <div class="img"></div> -->
+					<div id="calendarevents">        
+						<!-- Fluid width widget -->
+	    	    <div class="panel panel-danger">
+	                <div class="panel-heading">
+	                    <h3 class="panel-title">
+	                        <span class="glyphicon glyphicon-calendar"></span> 
+	                        Calendar Events
+	                    </h3>
+	                </div>
+	                <div class="panel-body">
+	                    <ul class="media-list">
+	                        <li class="media">
+	                            <div class="media-left">
+	                                <div class="panel panel-danger text-center date">
+	                                    <div class="panel-heading month">
+	                                        <span class="panel-title strong">
+	                                            Mar
+	                                        </span>
+	                                    </div>
+	                                    <div class="panel-body day text-danger">
+	                                        23
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="media-body">
+	                                <h4 class="media-heading">
+	                                    Pulvinar Mauris Eu
+	                                </h4>
+	                                <p>
+	                                    Vivamus pulvinar mauris eu placerat blandit. In euismod tellus vel ex vestibulum congue.
+	                                </p>
+	                            </div>
+	                        </li>
+	                        <li class="media">
+	                            <div class="media-left">
+	                                <div class="panel panel-danger text-center date">
+	                                    <div class="panel-heading month">
+	                                        <span class="panel-title strong">
+	                                            Jan
+	                                        </span>
+	                                    </div>
+	                                    <div class="panel-body text-danger day">
+	                                        16
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="media-body">
+	                                <h4 class="media-heading">
+	                                    Aenean Consectetur Ultricies
+	                                </h4>
+	                                <p>
+	                                    Curabitur vel malesuada tortor, sit amet ultricies mauris. Aenean consectetur ultricies luctus.
+	                                </p>
+	                            </div>
+	                        </li>
+	                        <li class="media">
+	                            <div class="media-left">
+	                                <div class="panel panel-danger text-center date">
+	                                    <div class="panel-heading month">
+	                                        <span class="panel-title strong all-caps">
+	                                            Dec
+	                                        </span>
+	                                    </div>
+	                                    <div class="panel-body text-danger day">
+	                                        8
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="media-body">
+	                                <h4 class="media-heading">
+	                                    Praesent Tincidunt
+	                                </h4>
+	                                <p>
+	                                    Sed convallis dignissim magna et dignissim. Praesent tincidunt sapien eu gravida dignissim.
+	                                </p>
+	                            </div>
+	                        </li>
+	                    </ul>
+	                    <a href="#" class="btn btn-default btn-block">More Events »</a>
+	                </div>
+	            </div>
+	            <!-- End fluid width widget -->
+	          </div> 
 					<h4>
-						<div>
-							<p>
-								The Renton City Concert Band presents a series of three concerts each school year in December, March and June.
-							</p>
-					<h2>
-						2018 Events
-					</h2>
-					<h4>
-						<div style="text-decoration: line-through">
-							<p>
-								- March 25 - Marches, Movies, and Musicals
-							</p>
-						</div>
-						<p>
-							- May 31st (<i>Special Appearance</i>)- Joint Concert with the Lindbergh High School
+						<p align="center">
+							Concerts are held (unless otherwise specified) at the <b>IKEA Performing Arts Center</b>, located at:
+							<div align="center"> 
+								<div id="map" style="width:506px;height:250px"></div>
+								<p><i>Renton High School, 400 S. 2nd Street Renton, WA 98057</i></p>
+							</div>
 						</p>
-						<p>
-							- June 10th - Freaky, Funky, Fun!
-						</p>
-						<p>
-							- July 4th - Independence Day Celebration
-						</p>
-						</div>
 					</h4>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4 col1">
+				<!-- <div class="col-md-4 col1">
 					<h2 align="center">
 						Lindbergh Joint Concert
 					</h2>
@@ -67,8 +134,8 @@
 						<br><b>Place: <i></b>16426 128th Ave SE Renton WA 98058</i>
 						<br><br>(At the Lindbergh High School Auditorium.)
 					</p>
-				</div>
-				<div class="col-md-4 col2">
+				</div> -->
+				<div class="col-md-4 col1">
 					<h2 align="center">
 						Freaky, Funky, Fun!
 					</h2>
@@ -82,17 +149,21 @@
 						<br>- And more!
 					</p>
 				</div>
-				<div class="col-md-4 col3">
+				<div class="col-md-4 col2">
 					<h2 align="center">
 						Summer Park Performances
 					</h2>
 					<p>
 						Performances throughout the summer, including July 4th!
-						<br><br><b>On the docket:</b>
-						<br><br>- TBA
+						<br>
+						<br><b>On the docket:</b>
+						<br>- America the Beautiful
+						<br>- Marriage of Figaro
+						<br>- Air for Band
+						<br>- Trombone Rag
 					</p>
 				</div>
-<!--    		 	    
+    		 	    
 				<div class="col-md-4 col3">
 					<h2>
 						Holiday Heralds
@@ -103,19 +174,8 @@
 						<br><br>- TBA
 					</p>
 				</div> 
--->
-				<div class="jumbotron">
-					<!-- <div class="img"></div> -->
-					<h4>
-						<p>
-							Concerts are held (unless otherwise specified) at the <b>IKEA Performing Arts Center</b>, located at:
-							<div align="left"> 
-								<div id="map" style="width:506px;height:250px"></div>
-								<p><i>Renton High School, 400 S. 2nd Street Renton, WA 98057</i></p>
-							</div>
-						</p>
-					</h4>
-				</div>
+
+
 			</div>
 			<div id="footer-html"></div>
 		</div>
@@ -133,6 +193,95 @@
 			infowindow = new google.maps.InfoWindow({content:'<strong>IKEA Performing Arts</strong><br>400 S 2nd St, Renton, WA 98057<br> <br>'});
 			infowindow.open(map,marker);
 		}
+		// Generates the HTML for the calendar events part of the page
+		var events = [
+			{ 
+				month:   "Mar",
+				day:     25,
+				title:   "Marches, Movies, and Musicals",
+				content: "John Phillips Sousa, John Williams, and more! (not all Johns though)",
+				past:    true,
+			},
+			{ 
+				month:   "May",
+				day:     31,
+				title:   "Lindbergh High Meets RCCB",
+				content: "Joint concert with the Lindbergh High School",
+				past:    true,
+			},
+			{ 
+				month:   "Jun",
+				day:     27,
+				title:   "Summer Concert #1",
+				content: "Come join us for an afternoon of fun at the Gene Coulon Memorial Beach Park in Renton!  Our concert begins at 4PM.",
+				past:    false,
+			},
+			{ 
+				month:   "Jul",
+				day:     4,
+				title:   "Summer Concert #2",
+				content: "Come for the music, stay for the fireworks!  Celebrate your 4th of July at Coulon Park! (Official events page <a href='https://rentonwa.gov/cms/one.aspx?pageId=12288788'>here</a>.)",
+				past:    false,
+			},
+			{ 
+				month:   "Jul",
+				day:     29,
+				title:   "Summer Concert #3",
+				content: "Family Fun at Liberty Park is the <b>Renton River Days</b>.   Learn more <a href='http://www.rentonriverdays.org/'>here</a>.",
+				past:    false,
+			},
+
+		]
+		function cEvents(events) {
+			var fce = "";
+			fce += '\
+							    	    <div class="panel panel-danger"> \
+	                <div class="panel-heading"> \
+	                    <h3 class="panel-title"> \
+	                        <span class="glyphicon glyphicon-calendar"></span> \
+	                        Calendar Events \
+	                    </h3> \
+	                </div> \
+	                <div class="panel-body"> \
+	                    <ul class="media-list">';
+			var i;
+			for (i = 0; i < events.length; i++) {
+				// console.log(events[i]);
+				var past = events[i]['past'];
+				var texttype = "success";
+				if (past) {
+					texttype = "muted";
+				}
+				fce += '\
+					                        <li class="media"> \
+	                            <div class="media-left"> \
+	                                <div class="panel panel-danger text-center date"> \
+	                                    <div class="panel-heading month"> \
+	                                        <span class="panel-title strong"> \
+	                                            ' + events[i]['month'] + ' \
+	                                        </span> \
+	                                    </div> \
+	                                    <div class="panel-body day text-' + texttype + '"> \
+	                                        ' + events[i]['day'] + ' \
+	                                    </div> \
+	                                </div> \
+	                            </div> \
+	                            <div class="media-body"> \
+	                                <h4 class="media-heading"> \
+	                                    ' + events[i]['title'] + ' \
+	                                </h4> \
+	                                <p> \
+	                                    ' + events[i]['content'] + ' \
+	                                </p> \
+	                            </div> \
+	                        </li>';
+			}
+			fce += ' \
+	                </div> \
+	            </div>';
+			document.getElementById('calendarevents').innerHTML = fce;
+		}
+		cEvents(events);
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?callback=myMap&key=AIzaSyAiJbX6jaNXyoVdXfnTA2qwSBA6E2bTfhM"></script>
   </body>
