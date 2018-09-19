@@ -30,89 +30,7 @@
 			<div class="row">
 				<div class="jumbotron">
 					<!-- <div class="img"></div> -->
-					<div id="calendarevents">        
-						<!-- Fluid width widget -->
-	    	    <div class="panel panel-danger">
-	                <div class="panel-heading">
-	                    <h3 class="panel-title">
-	                        <span class="glyphicon glyphicon-calendar"></span> 
-	                        Calendar Events
-	                    </h3>
-	                </div>
-	                <div class="panel-body">
-	                    <ul class="media-list">
-	                        <li class="media">
-	                            <div class="media-left">
-	                                <div class="panel panel-danger text-center date">
-	                                    <div class="panel-heading month">
-	                                        <span class="panel-title strong">
-	                                            Mar
-	                                        </span>
-	                                    </div>
-	                                    <div class="panel-body day text-danger">
-	                                        23
-	                                    </div>
-	                                </div>
-	                            </div>
-	                            <div class="media-body">
-	                                <h4 class="media-heading">
-	                                    Pulvinar Mauris Eu
-	                                </h4>
-	                                <p>
-	                                    Vivamus pulvinar mauris eu placerat blandit. In euismod tellus vel ex vestibulum congue.
-	                                </p>
-	                            </div>
-	                        </li>
-	                        <li class="media">
-	                            <div class="media-left">
-	                                <div class="panel panel-danger text-center date">
-	                                    <div class="panel-heading month">
-	                                        <span class="panel-title strong">
-	                                            Jan
-	                                        </span>
-	                                    </div>
-	                                    <div class="panel-body text-danger day">
-	                                        16
-	                                    </div>
-	                                </div>
-	                            </div>
-	                            <div class="media-body">
-	                                <h4 class="media-heading">
-	                                    Aenean Consectetur Ultricies
-	                                </h4>
-	                                <p>
-	                                    Curabitur vel malesuada tortor, sit amet ultricies mauris. Aenean consectetur ultricies luctus.
-	                                </p>
-	                            </div>
-	                        </li>
-	                        <li class="media">
-	                            <div class="media-left">
-	                                <div class="panel panel-danger text-center date">
-	                                    <div class="panel-heading month">
-	                                        <span class="panel-title strong all-caps">
-	                                            Dec
-	                                        </span>
-	                                    </div>
-	                                    <div class="panel-body text-danger day">
-	                                        8
-	                                    </div>
-	                                </div>
-	                            </div>
-	                            <div class="media-body">
-	                                <h4 class="media-heading">
-	                                    Praesent Tincidunt
-	                                </h4>
-	                                <p>
-	                                    Sed convallis dignissim magna et dignissim. Praesent tincidunt sapien eu gravida dignissim.
-	                                </p>
-	                            </div>
-	                        </li>
-	                    </ul>
-	                    <a href="#" class="btn btn-default btn-block">More Events »</a>
-	                </div>
-	            </div>
-	            <!-- End fluid width widget -->
-	          </div> 
+					<div id="calendarevents"></div> 
 					<h4>
 						<p align="center">
 							Concerts are held (unless otherwise specified) at the <b>IKEA Performing Arts Center</b>, located at:
@@ -125,28 +43,22 @@
 				</div>
 			</div>
 			<div class="row">
-				<!-- <div class="col-md-4 col1">
-					<h2 align="center">
-						Lindbergh Joint Concert
+				<div class="col-md-4 col3">
+					<h2>
+						Holiday Heralds
 					</h2>
 					<p>
-						We are pleased to perform along side the Lindbergh High School Concert Band!<br><br><br><br><br><br><b>Time: <i></b>Thursday, May 31st at 7:00PM</i>
-						<br><b>Place: <i></b>16426 128th Ave SE Renton WA 98058</i>
-						<br><br>(At the Lindbergh High School Auditorium.)
+						Bring in the Season with us later this year with the sound of the holidays as we celebrate this Christmas season with all the classics!
+						<br><br><b>On the docket:</b>
+						<br><br>- TBA
 					</p>
-				</div> -->
+				</div> 
 				<div class="col-md-4 col1">
 					<h2 align="center">
-						Freaky, Funky, Fun!
+						Wonder Women / Through the Prism
 					</h2>
 					<p>
-						Hungry for some fun?  Crave the power of Funk?  Join us on June 10th as we celebrate some of the greats this spring at the IKEA PAC!						
-						<br><br><b>On the docket:</b>
-						<br>- Symphony No. 1 (In Memoriam Dresden)
-						<br>- Grand Serenade for an Awful Lot of Winds and Percussion
-						<br>- Godzilla Eats Las Vegas
-						<br>- Tower of Power
-						<br>- And more!
+						Our Spring and Summer concerts, on March 31st and June 9th, at the IKEA Performing Arts Center.
 					</p>
 				</div>
 				<div class="col-md-4 col2">
@@ -164,16 +76,7 @@
 					</p>
 				</div>
     		 	    
-				<div class="col-md-4 col3">
-					<h2>
-						Holiday Heralds
-					</h2>
-					<p>
-						Bring in the Season with us later this year with the sound of the holidays as we celebrate this Christmas season with all the classics!
-						<br><br><b>On the docket:</b>
-						<br><br>- TBA
-					</p>
-				</div> 
+
 
 
 			</div>
@@ -196,41 +99,33 @@
 		// Generates the HTML for the calendar events part of the page
 		var events = [
 			{ 
-				month:   "Mar",
-				day:     25,
-				title:   "Marches, Movies, and Musicals",
-				content: "John Phillips Sousa, John Williams, and more! (not all Johns though)",
-				past:    true,
-			},
-			{ 
-				month:   "May",
-				day:     31,
-				title:   "Lindbergh High Meets RCCB",
-				content: "Joint concert with the Lindbergh High School",
-				past:    true,
-			},
-			{ 
-				month:   "Jun",
-				day:     27,
-				title:   "Summer Concert #1",
-				content: "Come join us for an afternoon of fun at the Gene Coulon Memorial Beach Park in Renton!  Our concert begins at 4PM.",
-				past:    false,
-			},
-			{ 
-				month:   "Jul",
-				day:     4,
-				title:   "Summer Concert #2",
-				content: "Come for the music, stay for the fireworks!  Celebrate your 4th of July at Coulon Park! (Official events page <a href='https://rentonwa.gov/cms/one.aspx?pageId=12288788'>here</a>.)",
-				past:    false,
-			},
-			{ 
 				month:   "Jul",
 				day:     29,
 				title:   "Summer Concert #3",
 				content: "Family Fun at Liberty Park is the <b>Renton River Days</b>.   Learn more <a href='http://www.rentonriverdays.org/'>here</a>.",
+				past:    true,
+			},
+			{ 
+				month:   "Dec",
+				day:     9,
+				title:   "Holiday Concert",
+				content: "Sounds of the season.",
 				past:    false,
 			},
-
+			{ 
+				month:   "Mar",
+				day:     31,
+				title:   "(2019) Spring Concert",
+				content: '"Wonder Women"',
+				past:    false,
+			},
+			{ 
+				month:   "Jun",
+				day:     9,
+				title:   "(2019) Summer Concert",
+				content: '"Through the Prism"',
+				past:    false,
+			},
 		]
 		function cEvents(events) {
 			var fce = "";
