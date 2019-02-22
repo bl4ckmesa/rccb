@@ -30,18 +30,19 @@
 			<div class="row">
 				<div class="jumbotron">
 					<div align="center">
-						<a href="assets/2018_NOV_Flyer.pdf">
-							<img style="max-width:95%;border:10px ridge #545565;" src="assets/2018_NOV_Flyer.png" alt="November Concert (Click here for PDF Flyer)" />
+						<a href="assets/WonderWomanSpring2019.png">
+							<img style="max-width:95%;border:10px ridge #545565;" src="assets/WonderWomanSpring2019.png" alt="Spring Concert (Click here to view image." />
 						</a>
 					</div>
 					<p>
 					<!-- <div class="img"></div> -->
 					<h4>
 						<p align="center">
-							Concerts are held (unless otherwise specified) at <br>the <b>IKEA Performing Arts Center</b>, located at:
+							<!-- Concerts are held (unless otherwise specified) at <br>the <b>IKEA Performing Arts Center</b>, located at: -->
+							The concert will be held at the Carco Theater, located at:
 							<div align="center"> 
 								<div id="map" style="width:506px;height:250px"></div>
-								<p><i>Renton High School, 400 S. 2nd Street Renton, WA 98057</i></p>
+								<p><i>IKEA PAC - Renton High School, 400 S. 2nd Street Renton, WA 98057</i></p>
 							</div>
 						</p>
 					</h4>
@@ -51,20 +52,20 @@
 			<div class="row">
 				<div class="col-md-4 col3">
 					<h2>
-						Holiday Heralds
+						Wonder Women
 					</h2>
 					<p>
-						Bring in the Season with us later this year with the sound of the holidays as we celebrate this Christmas season with all the classics!
+						Our Spring concert at Carco Theater
 						<br><br><b>On the docket:</b>
 						<br><br>- TBA
 					</p>
 				</div> 
 				<div class="col-md-4 col1">
 					<h2 align="center">
-						Wonder Women / Through the Prism
+						Through the Prism
 					</h2>
 					<p>
-						Our Spring and Summer concerts, on March 31st and June 9th, at the IKEA Performing Arts Center.
+						Our Summer concert, June 9th, at the IKEA Performing Arts Center.
 					</p>
 				</div>
 				<div class="col-md-4 col2">
@@ -81,43 +82,32 @@
 						<br>- Trombone Rag
 					</p>
 				</div>
-    		 	    
-
-
-
 			</div>
 			<div id="footer-html"></div>
 		</div>
 	</div>
 	<script>
 		function myMap() {
-		    var mapOptions = {
-		        center: new google.maps.LatLng(47.481741, -122.21197),
+	    var mapOptionsIKEA = {
+	        center: new google.maps.LatLng(47.481741, -122.21197),
+	        zoom: 13,
+	        mapTypeId: google.maps.MapTypeId.ROADMAP,
+	        content: '<strong>IKEA Performing Arts</strong><br>400 S 2nd St, Renton, WA 98057<br> <br>'
+	    }
+	    var mapOptionsCarco = {
+		        center: new google.maps.LatLng(47.480563, -122.197149),
 		        zoom: 13,
-		        mapTypeId: google.maps.MapTypeId.ROADMAP
+		        mapTypeId: google.maps.MapTypeId.ROADMAP,
+		        content: '<strong>Carco Theatre</strong><br>1717 SE Maple Valley Highway, Renton WA 98057<br> <br>'
 		    }
-		var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-		var marker = new google.maps.Marker({
-			map: map,position: new google.maps.LatLng(47.481741,-122.21197000000001)});
-			infowindow = new google.maps.InfoWindow({content:'<strong>IKEA Performing Arts</strong><br>400 S 2nd St, Renton, WA 98057<br> <br>'});
+		  var mapOptions = mapOptionsCarco
+			var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+			var marker = new google.maps.Marker({map: map,position: mapOptions.center});
+			infowindow = new google.maps.InfoWindow({content:mapOptions.content});
 			infowindow.open(map,marker);
 		}
 		// Generates the HTML for the calendar events part of the page
 		var events = [
-			{ 
-				month:   "Nov",
-				day:     18,
-				title:   "Borrowed, Stolen, Flipped",
-				content: "Our first performance of the season!",
-				past:    false,
-			},
-			{ 
-				month:   "Dec",
-				day:     9,
-				title:   "Holiday Concert",
-				content: "Sounds of the holidays.",
-				past:    false,
-			},
 			{ 
 				month:   "Mar",
 				day:     17,
